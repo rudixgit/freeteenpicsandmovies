@@ -30,7 +30,14 @@ const IndexPage = ({ data, pageContext }) => {
           {pageContext.items.map(item => {
             return (
               <div>
-                <a href={'/' + item.slug}>{item.item}</a>
+                <a
+                  href={
+                    'https://rudixgit.github.io/freeteenpicsandmovies/' +
+                    item.slug
+                  }
+                >
+                  {item.item}
+                </a>
               </div>
             )
           })}
@@ -40,7 +47,14 @@ const IndexPage = ({ data, pageContext }) => {
           {data.allSitePage.nodes.map(item => {
             return (
               <div>
-                <a href={item.path}>{item.context.keyword}</a>
+                <a
+                  href={
+                    'https://rudixgit.github.io/freeteenpicsandmovies/' +
+                    item.path
+                  }
+                >
+                  {item.context.keyword}
+                </a>
               </div>
             )
           })}
