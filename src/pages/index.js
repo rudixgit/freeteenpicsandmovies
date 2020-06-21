@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import axios from 'axios'
 import SEO from '../components/seo'
-
 const IndexPage = ({ data, pageContext }) => {
   const [data1, setData] = useState({ hits: [] })
   useEffect(() => {
