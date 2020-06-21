@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import axios from 'axios'
 import SEO from '../components/seo'
+
 const IndexPage = ({ data, pageContext }) => {
   const [data1, setData] = useState({ hits: [] })
   useEffect(() => {
@@ -29,7 +30,14 @@ const IndexPage = ({ data, pageContext }) => {
           {pageContext.items.map((item) => {
             return (
               <div>
-                <a href={'/' + item.slug}>{item.item}</a>
+                <a
+                  href={
+                    'https://rudixgit.github.io/freeteenpicsandmovies/' +
+                    item.slug
+                  }
+                >
+                  {item.item}
+                </a>
               </div>
             )
           })}
@@ -39,7 +47,14 @@ const IndexPage = ({ data, pageContext }) => {
           {data.allSitePage.nodes.map((item) => {
             return (
               <div>
-                <a href={'/' + item.path}>{item.context.keyword}</a>
+                <a
+                  href={
+                    'https://rudixgit.github.io/freeteenpicsandmovies/' +
+                    item.path
+                  }
+                >
+                  {item.context.keyword}
+                </a>
               </div>
             )
           })}

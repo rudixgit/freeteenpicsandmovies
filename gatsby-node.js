@@ -28473,7 +28473,7 @@ exports.createPages = ({ actions }) => {
   _.shuffle(keywords).forEach((element) => {
     createPage({
       // Path for this page — required
-      path: `${slugify(element)}.html`,
+      path: `${slugify(element)}`,
       component: blogPostTemplate,
       context: {
         keyword: element,
