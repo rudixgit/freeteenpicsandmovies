@@ -19,7 +19,7 @@ const IndexPage = ({ data, pageContext }) => {
   return (
     <Layout title={pageContext.keyword ? pageContext.keyword : 'Home'}>
       <SEO title={pageContext.keyword ? pageContext.keyword : 'Home'} />
-      {data1.hits.map(item => (
+      {data1.hits.map((item) => (
         <li key={item.objectID}>
           <a href={item.url}>{item.title}</a>
         </li>
@@ -27,34 +27,20 @@ const IndexPage = ({ data, pageContext }) => {
       {pageContext.keyword ? (
         <div>
           {pageContext.text}
-          {pageContext.items.map(item => {
+          {pageContext.items.map((item) => {
             return (
               <div>
-                <a
-                  href={
-                    'https://rudixgit.github.io/freeteenpicsandmovies/' +
-                    item.slug
-                  }
-                >
-                  {item.item}
-                </a>
+                <a href={'/' + item.slug}>{item.item}</a>
               </div>
             )
           })}
         </div>
       ) : (
         <div>
-          {data.allSitePage.nodes.map(item => {
+          {data.allSitePage.nodes.map((item) => {
             return (
               <div>
-                <a
-                  href={
-                    'https://rudixgit.github.io/freeteenpicsandmovies/' +
-                    item.path
-                  }
-                >
-                  {item.context.keyword}
-                </a>
+                <a href={'/' + item.path}>{item.context.keyword}</a>
               </div>
             )
           })}
