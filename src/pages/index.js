@@ -30,7 +30,7 @@ const IndexPage = ({ data, pageContext }) => {
           {pageContext.items.map((item) => {
             return (
               <div>
-                <a href={'https://d25qv0buw2jf5u.cloudfront.net/' + item.slug}>
+                <a href={'https://d25qv0buw2jf5u.cloudfront.net' + item.slug}>
                   {item.item}
                 </a>
               </div>

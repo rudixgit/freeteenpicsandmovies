@@ -72,7 +72,12 @@ function SEO({ description, lang, meta, title }) {
           content: 'KVKRQnV-tPoAomLbLXck9tAygkoxdkyo1aX3PD5H25A',
         },
       ].concat(meta)}
-    ></Helmet>
+    >
+      <meta
+        name="google-site-verification"
+        content="k5wjsfplDepdyMQ3WGKAuUijn4cwioYe29gtu3V1HVg"
+      />
+    </Helmet>
   )
 }
 
