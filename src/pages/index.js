@@ -30,7 +30,7 @@ const IndexPage = ({ data, pageContext }) => {
           {pageContext.items.map((item) => {
             return (
               <div>
-                <a href={'https://d25qv0buw2jf5u.cloudfront.net' + item.slug}>
+                <a href={'https://d25qv0buw2jf5u.cloudfront.net/' + item.slug}>
                   {item.item}
                 </a>
               </div>
@@ -42,8 +42,8 @@ const IndexPage = ({ data, pageContext }) => {
           {data.allSitePage.nodes.map((item) => {
             return (
               <div>
-                <a href={'https://d25qv0buw2jf5u.cloudfront.net/' + item.path}>
-                  {item.context.keyword}
+                <a href={'https://d25qv0buw2jf5u.cloudfront.net' + item.path}>
+                  <b>{item.context.keyword}</b>
                 </a>
               </div>
             )
