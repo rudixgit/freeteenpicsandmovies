@@ -1,4 +1,4 @@
-name: Production Build
+name: S3 Build
 on:
   pull_request:
   push:
