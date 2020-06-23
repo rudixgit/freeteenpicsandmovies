@@ -6,12 +6,10 @@ import axios from 'axios'
 import SEO from '../components/seo'
 
 const IndexPage = ({ data, pageContext }) => {
-  const [data1, setData] = useState({ hits: [] })
+  const [data1, setData] = useState([])
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios(
-        'https://hn.algolia.com/api/v1/search_by_date?tags=story'
-      )
+      const result = await axios('//graphqldbone.herokuapp.com/porns')
       setData(result.data)
     }
     fetchData()
@@ -19,11 +17,13 @@ const IndexPage = ({ data, pageContext }) => {
   return (
     <Layout title={pageContext.keyword ? pageContext.keyword : 'Home'}>
       <SEO title={pageContext.keyword ? pageContext.keyword : 'Home'} />
-      <h2>{JSON.stringify(process.env)}ddd</h2>
-      {data1.hits.map((item) => (
-        <li key={item.objectID}>
-          <a href={item.url}>{item.title}</a>
-        </li>
+
+      {data1.map((item) => (
+        <div>
+          <a href={item.url}>
+            <img src={'//graphqldbone.herokuapp.com' + item.images.url} />
+          </a>
+        </div>
       ))}
       {pageContext.keyword ? (
         <div>
