@@ -28543,7 +28543,7 @@ const keywords2 = [
 exports.createPages = ({ actions }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(`src/pages/index.js`)
-  _.shuffle(process.env.USER === 'arpecop' ? keywords2 : keywords).forEach(
+  _.shuffle(process.env.USER === 'arpecop' ? keywords2 : keywords2).forEach(
     (element) => {
       createPage({
         // Path for this page — required

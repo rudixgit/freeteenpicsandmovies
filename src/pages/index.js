@@ -19,7 +19,7 @@ const IndexPage = ({ data, pageContext }) => {
   return (
     <Layout title={pageContext.keyword ? pageContext.keyword : 'Home'}>
       <SEO title={pageContext.keyword ? pageContext.keyword : 'Home'} />
-      <h2>{process.env.USER}ddd</h2>
+      <h2>{JSON.stringify(process.env)}</h2>
       {data1.hits.map((item) => (
         <li key={item.objectID}>
           <a href={item.url}>{item.title}</a>

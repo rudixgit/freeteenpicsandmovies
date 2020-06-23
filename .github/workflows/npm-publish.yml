@@ -17,3 +17,4 @@ jobs:
           gatsby-args: --prefix-paths
     env:
       URL: 'http://rudixgit.github.io/freeteenpicsandmovies/'
+      USER: 'test'
