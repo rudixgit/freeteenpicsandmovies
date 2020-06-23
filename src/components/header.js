@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-
+import './layout.css'
 const Header = ({ siteTitle }) => (
   <header
     style={{
