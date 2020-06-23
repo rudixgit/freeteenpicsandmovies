@@ -28467,7 +28467,7 @@ const keywords = [
   'zombie porno',
   'zumba xxx',
 ]
-<<<<<<< HEAD
+
 const keywords2 = [
   'young blonde',
   'young blowjob',
@@ -28538,39 +28538,12 @@ const keywords2 = [
   'zelda porno',
   'zimbabwe sex',
   'zimbabwean porn',
-=======
-
-const keywords2 = [
-  'zombie fuck porn',
-  'zombie girl fucked',
-  'zombie porn',
-  'zombie porno',
-  'zumba xxx',
-  'zombie fuck porn',
-  'zombie girl fucked',
-  'zombie porn',
-  'zombie porno',
-  'zumba xxx',
-  'zombie fuck porn',
-  'zombie girl fucked',
-  'zombie porn',
-  'zombie porno',
-  'zumba xxx',
->>>>>>> 45feb6e0405fc82d8159ac53e9aea7a7497dfb8b
-  'zombie fuck porn',
-  'zombie girl fucked',
-  'zombie porn',
-  'zombie porno',
-  'zumba xxx',
 ]
-<<<<<<< HEAD
-=======
-console.log(process.env.USER)
->>>>>>> 45feb6e0405fc82d8159ac53e9aea7a7497dfb8b
+
 exports.createPages = ({ actions }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(`src/pages/index.js`)
-  _.shuffle(process.env.USER === 'arpecop' ? keywords2 : keywords).forEach(
+  _.shuffle(process.env.USER === 'arpecop' ? keywords2 : keywords2).forEach(
     (element) => {
       createPage({
         // Path for this page — required
