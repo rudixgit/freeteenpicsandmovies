@@ -19,6 +19,7 @@ const IndexPage = ({ data, pageContext }) => {
   return (
     <Layout title={pageContext.keyword ? pageContext.keyword : 'Home'}>
       <SEO title={pageContext.keyword ? pageContext.keyword : 'Home'} />
+      <h2>{process.env.USER}ddd</h2>
       {data1.hits.map((item) => (
         <li key={item.objectID}>
           <a href={item.url}>{item.title}</a>
@@ -30,9 +31,7 @@ const IndexPage = ({ data, pageContext }) => {
           {pageContext.items.map((item) => {
             return (
               <div>
-                <a href={'https://d25qv0buw2jf5u.cloudfront.net/' + item.slug}>
-                  {item.item}
-                </a>
+                <a href={'' + item.slug}>{item.item}</a>
               </div>
             )
           })}
@@ -42,7 +41,7 @@ const IndexPage = ({ data, pageContext }) => {
           {data.allSitePage.nodes.map((item) => {
             return (
               <div>
-                <a href={'https://d25qv0buw2jf5u.cloudfront.net' + item.path}>
+                <a href={'' + item.path}>
                   <b>{item.context.keyword}</b>
                 </a>
               </div>
