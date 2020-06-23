@@ -28467,23 +28467,49 @@ const keywords = [
   'zombie porno',
   'zumba xxx',
 ]
+
+const keywords2 = [
+  'zombie fuck porn',
+  'zombie girl fucked',
+  'zombie porn',
+  'zombie porno',
+  'zumba xxx',
+  'zombie fuck porn',
+  'zombie girl fucked',
+  'zombie porn',
+  'zombie porno',
+  'zumba xxx',
+  'zombie fuck porn',
+  'zombie girl fucked',
+  'zombie porn',
+  'zombie porno',
+  'zumba xxx',
+  'zombie fuck porn',
+  'zombie girl fucked',
+  'zombie porn',
+  'zombie porno',
+  'zumba xxx',
+]
+console.log(process.env.USER)
 exports.createPages = ({ actions }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(`src/pages/index.js`)
-  _.shuffle(keywords).forEach((element) => {
-    createPage({
-      // Path for this page — required
-      path: `${slugify(element)}`,
-      component: blogPostTemplate,
-      context: {
-        keyword: element,
-        text: randomize(content, element),
-        items: _.shuffle(keywords)
-          .slice(0, 5)
-          .map((item) => {
-            return { item: item, slug: slugify(item) }
-          }),
-      },
-    })
-  })
+  _.shuffle(process.env.USER === 'arpecop' ? keywords2 : keywords).forEach(
+    (element) => {
+      createPage({
+        // Path for this page — required
+        path: `${slugify(element)}`,
+        component: blogPostTemplate,
+        context: {
+          keyword: element,
+          text: randomize(content, element),
+          items: _.shuffle(keywords)
+            .slice(0, 5)
+            .map((item) => {
+              return { item: item, slug: slugify(item) }
+            }),
+        },
+      })
+    }
+  )
 }
